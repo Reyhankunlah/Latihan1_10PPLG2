@@ -1,7 +1,7 @@
 package com.example.mobiledev;
 
 public class ModelMakanan {
-   private String namaMakanan;
+    private String namaMakanan;
 
     public String getNamaMakanan() {
         return namaMakanan;

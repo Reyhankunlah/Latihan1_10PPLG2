@@ -12,11 +12,9 @@ import java.util.ArrayList;
 
 public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHolder> {
 
-    // ArrayList yang akan diolah di Adapter
-    ArrayList<ModelMakanan> listMakanan;
+    private final ArrayList<ModelMakanan> listMakanan;
 
-
-    public AdapterMakanan( ArrayList<ModelMakanan> listMakanan){
+    public AdapterMakanan(ArrayList<ModelMakanan> listMakanan) {
         this.listMakanan = listMakanan;
     }
 
@@ -28,7 +26,6 @@ public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHold
         return new ViewHolder(view);
     }
 
-    // untuk Binding/Mengaitkan ke RecyclerView
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ModelMakanan namaMakanan = listMakanan.get(position);
@@ -43,12 +40,9 @@ public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvNamaMakanan;
 
-        public ViewHolder( View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNamaMakanan = itemView.findViewById(R.id.tvMakanan);
         }
     }
-
 }
-
-

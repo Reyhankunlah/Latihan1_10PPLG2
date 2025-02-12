@@ -1,38 +1,45 @@
 package com.example.mobiledev;
 
 import android.os.Bundle;
-import androidx.activity.EdgeToEdge;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class RecyclerActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    public AdapterMakanan adapter;
+    private AdapterMakanan adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_recycler);
 
-        // Inisialisasi RecyclerView
         recyclerView = findViewById(R.id.rvMakanan);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Inisialisasi ArrayList Makanan
         ArrayList<ModelMakanan> listMakanan = new ArrayList<>();
 
-        ModelMakanan nasigoreng = new ModelMakanan();
-        nasigoreng.setNamaMakanan("Nasi Goreng");
+        ModelMakanan nasiGoreng = new ModelMakanan();
+        nasiGoreng.setNamaMakanan("Nasi Goreng");
+        listMakanan.add(nasiGoreng);
 
         ModelMakanan ayamGoreng = new ModelMakanan();
-        ayamGoreng.setNamaMakanan("Ayam Goreng"); // Perbaikan kesalahan variabel
-
-        listMakanan.add(nasigoreng);
+        ayamGoreng.setNamaMakanan("Ayam Goreng");
         listMakanan.add(ayamGoreng);
+
+        ModelMakanan soto = new ModelMakanan();
+        soto.setNamaMakanan("Soto Ayam");
+        listMakanan.add(soto);
+
+        Log.d("RecyclerView", "Jumlah item: " + listMakanan.size());
+        for (ModelMakanan makanan : listMakanan) {
+            Log.d("RecyclerView", "Makanan: " + makanan.getNamaMakanan());
+        }
 
         // Set Adapter ke RecyclerView
         adapter = new AdapterMakanan(listMakanan);
