@@ -3,6 +3,7 @@ package com.example.mobiledev;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 
 public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHolder> {
 
-    private final ArrayList<ModelMakanan> listMakanan;
+    ArrayList<ModelMakanan> dataMakanan;
 
-    public AdapterMakanan(ArrayList<ModelMakanan> listMakanan) {
-        this.listMakanan = listMakanan;
+    public AdapterMakanan(ArrayList<ModelMakanan> dataMakanan) {
+        this.dataMakanan = dataMakanan;
     }
 
     @NonNull
@@ -28,21 +29,27 @@ public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ModelMakanan namaMakanan = listMakanan.get(position);
-        holder.tvNamaMakanan.setText(namaMakanan.getNamaMakanan());
+        ModelMakanan makanan = this.dataMakanan.get(position);
+        holder.tvNamaMakanan.setText(makanan.getNamaMakanan());
+        holder.tvHargaMakanan.setText(makanan.getHargaMakanan());
+        holder.imgMakanan.setImageResource(makanan.getGambarMakanan());
     }
 
     @Override
     public int getItemCount() {
-        return listMakanan.size();
+        return dataMakanan.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvNamaMakanan;
+        TextView tvHargaMakanan;
+        ImageView imgMakanan;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvNamaMakanan = itemView.findViewById(R.id.tvMakanan);
+            tvNamaMakanan = itemView.findViewById(R.id.tvNamaMakanan);
+            tvHargaMakanan = itemView.findViewById(R.id.tvHargaMakanan);
+            imgMakanan = itemView.findViewById(R.id.imgMakanan);
         }
     }
 }

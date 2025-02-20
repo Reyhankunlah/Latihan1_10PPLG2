@@ -1,7 +1,6 @@
 package com.example.mobiledev;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,29 +19,15 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
 
         recyclerView = findViewById(R.id.rvMakanan);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ArrayList<ModelMakanan> listMakanan = new ArrayList<>();
+        ArrayList<ModelMakanan> dataMakanan = new ArrayList<>();
+        dataMakanan.add(new ModelMakanan("Soto Ayam", "5.000", R.drawable.soto_ayam));
+        dataMakanan.add(new ModelMakanan("Nasi Goreng", "10.000", R.drawable.nasi_goreng));
+        dataMakanan.add(new ModelMakanan("STEAK WAGYU A5", "5.000.000", R.drawable.wahyu_a5));
 
-        ModelMakanan nasiGoreng = new ModelMakanan();
-        nasiGoreng.setNamaMakanan("Nasi Goreng");
-        listMakanan.add(nasiGoreng);
-
-        ModelMakanan ayamGoreng = new ModelMakanan();
-        ayamGoreng.setNamaMakanan("Ayam Goreng");
-        listMakanan.add(ayamGoreng);
-
-        ModelMakanan soto = new ModelMakanan();
-        soto.setNamaMakanan("Soto Ayam");
-        listMakanan.add(soto);
-
-        Log.d("RecyclerView", "Jumlah item: " + listMakanan.size());
-        for (ModelMakanan makanan : listMakanan) {
-            Log.d("RecyclerView", "Makanan: " + makanan.getNamaMakanan());
-        }
-
-        // Set Adapter ke RecyclerView
-        adapter = new AdapterMakanan(listMakanan);
+        adapter = new AdapterMakanan(dataMakanan);
         recyclerView.setAdapter(adapter);
     }
 }

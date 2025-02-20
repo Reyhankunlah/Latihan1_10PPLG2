@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
+    android:padding="25dp"
     android:background="@color/RUS_red"
     tools:context=".BMIActivity">
 
@@ -37,8 +37,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="25dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
 
             <EditText
                 android:id="@+id/edtTB"
