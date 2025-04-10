@@ -37,7 +37,7 @@ public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ModelMakanan makanan = dataMakanan.get(position);
         holder.tvNamaMakanan.setText(makanan.getNamaMakanan());
-        holder.tvHargaMakanan.setText(makanan.getHargaMakanan());
+        holder.tvHargaMakanan.setText("Rp " + makanan.getHargaMakanan());
         holder.tvDeskripsiMakanan.setText(makanan.getDeskripsiMakanan());
         holder.imgMakanan.setImageResource(makanan.getGambarMakanan());
 
@@ -49,11 +49,8 @@ public class AdapterMakanan extends RecyclerView.Adapter<AdapterMakanan.ViewHold
         return dataMakanan.size();
     }
 
-    // ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvNamaMakanan;
-        TextView tvHargaMakanan;
-        TextView tvDeskripsiMakanan;
+        TextView tvNamaMakanan, tvHargaMakanan, tvDeskripsiMakanan;
         ImageView imgMakanan;
 
         public ViewHolder(@NonNull View itemView) {

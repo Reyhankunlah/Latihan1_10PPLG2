@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/RUS_red"
+    android:background="@color/darkBackground"
     android:padding="15dp"
     tools:context=".MainActivity">
 
@@ -17,7 +17,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/darkCard"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp">
 
@@ -44,8 +44,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rounded_edt_rus"
                 android:hint="Username"
-                android:textColorHint="@color/black"
-                android:drawableLeft="@drawable/icon_nama"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/icon_nama_white"
                 android:inputType="text"
                 android:paddingStart="15dp"
                 android:paddingTop="15dp"
@@ -60,9 +60,9 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rounded_edt_rus"
                 android:hint="Password"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/white"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/icon_lock"
+                android:drawableLeft="@drawable/icon_lock_white"
                 android:paddingStart="15dp"
                 android:paddingTop="15dp"
                 android:paddingEnd="15dp"

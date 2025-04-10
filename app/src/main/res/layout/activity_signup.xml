@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".SignupActivity"
-    android:background="@color/RUS_red">
+    android:background="@color/darkBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/darkCard"
                 android:orientation="vertical"
                 android:padding="25dp">
 
@@ -35,6 +36,7 @@
                     android:layout_marginBottom="55dp"
                     android:fontFamily="sans-serif"
                     android:text="Account Info"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -45,6 +47,7 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="sans-serif"
                     android:text="Username"
+                    android:textColor="@color/white"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
@@ -52,9 +55,11 @@
                     android:id="@+id/edtUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
                     android:background="@drawable/rounded_edt_rus"
-                    android:drawableLeft="@drawable/icon_nama"
+                    android:drawableLeft="@drawable/icon_nama_white"
                     android:ems="10"
+                    android:textColor="@color/white"
                     android:hint="Username"
                     android:inputType="text"
                     android:padding="12dp" />
@@ -68,6 +73,7 @@
                     android:fontFamily="sans-serif"
                     android:text="Password"
                     android:textSize="15dp"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <EditText
@@ -75,9 +81,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_edt_rus"
-                    android:drawableLeft="@drawable/icon_lock"
+                    android:drawableLeft="@drawable/icon_lock_white"
                     android:ems="10"
                     android:hint="Password"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+
                     android:inputType="textPassword"
                     android:padding="12dp" />
 
@@ -90,6 +99,8 @@
                     android:fontFamily="sans-serif"
                     android:text="Confirm Password"
                     android:textSize="15dp"
+
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <EditText
@@ -97,9 +108,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_edt_rus"
-                    android:drawableLeft="@drawable/icon_lock"
+                    android:drawableLeft="@drawable/icon_lock_white"
                     android:ems="10"
+                    android:textColor="@color/white"
                     android:hint="Confirm Password"
+                    android:textColorHint="@color/white"
                     android:inputType="textPassword"
                     android:padding="12dp" />
 

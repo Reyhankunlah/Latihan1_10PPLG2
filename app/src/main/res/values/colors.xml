@@ -5,4 +5,11 @@
     <color name="holo_blue_dark">#FF0099CC</color>
     <color name="RUS_red">#FF3B3C</color>
     <color name="grey">#A9A9A9</color>
+
+    // Dark Mode
+    <color name="darkBackground">#121212</color>
+    <color name="darkCard">#1E1E1E</color>
+    <color name="buttonDark">#3E3E3E</color>
+    <color name="lightGrey">#CCCCCC</color>
+
 </resources>

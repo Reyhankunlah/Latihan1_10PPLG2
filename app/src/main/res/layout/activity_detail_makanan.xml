@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/darkBackground"
+    tools:context=".DetailMakananActivity">
+
+    <TextView
+        android:id="@+id/tvNamaMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"
+        android:text="Nama Makanan"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvHargaMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:text="Harga"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvDeskripsiMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:text="Deskripsi Makanan"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imgMakanan"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:contentDescription="Gambar Makanan" />
+
+    <TextView
+        android:id="@+id/tvDetailMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Detail tambahan"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+</LinearLayout>
